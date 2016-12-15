@@ -16,7 +16,8 @@ import {ChatBubble} from '../components/chat-bubble/chat-bubble';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HelloIonicPage
+    HelloIonicPage,
+    ChatBubble
   ],
   providers: []
 })

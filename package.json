@@ -25,9 +25,8 @@
     "zone.js": "0.6.26"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "nightly",
-    "@types/request": "0.0.30",
-    "typescript": "^2.0.3"
+    "@ionic/app-scripts": "0.0.47",
+    "typescript": "2.0.6"
   },
   "description": "MyIonic2Project: An Ionic project"
 }

@@ -1,21 +1,12 @@
-import { Component, NgZone, ViewChild } from '@angular/core';
-import { Platform, Content, TextInput } from 'ionic-angular';
-// import { Keyboard } from 'ionic-native';
-
+import { Component, ViewChild } from '@angular/core';
+import { Content, TextInput } from 'ionic-angular';
 @Component({
+  selector: 'hello-ionic-page',
   templateUrl: 'hello-ionic.html'
 })
 export class HelloIonicPage {
-  message = "";
-  messages = [];
-  inputEle
-  needsToFocus = false;
-  @ViewChild(Content) content: Content;
-  @ViewChild('chat_input') messageInput: TextInput;
-  constructor(
-    private platform: Platform,
-    public ngZone: NgZone) {
-    this.messages = [
+  public message = "";
+  public messages: any[] = [
       {
         position: 'left',
         body: 'aaa'
@@ -41,8 +32,9 @@ export class HelloIonicPage {
         body: 'fff'
       },
     ];
-  }
-
+  @ViewChild(Content) content: Content;
+  @ViewChild('chat_input') messageInput: TextInput;
+  constructor() {}
   sendMessage() {
     this.messages.push({
       position: 'left',
@@ -53,7 +45,6 @@ export class HelloIonicPage {
     this.messageInput.setFocus();
     this.updateScroll();
   }
-
   updateScroll() {
     console.log('updating scroll')
     setTimeout(() => {
